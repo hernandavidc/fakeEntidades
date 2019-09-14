@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from instituciones.views import getUsuarios, getUsuarioDetail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("todos", getUsuarios),
+    path("estudiante/<int:pk>/", getUsuarioDetail)
 ]
