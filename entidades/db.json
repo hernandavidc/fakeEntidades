@@ -1,0 +1,44 @@
+[{
+        "model": "instituciones.institucion",
+        "pk": 1,
+        "fields": {
+            "nombre": "Universidad Pontificia Bolivariana",
+            "s": "universidad-pontificia-bolivariana"
+        }
+    },
+    {
+        "model": "instituciones.programa",
+        "pk": 1,
+        "fields": {
+            "nombre": "Ingenier\u00eda de Sistemas e Inform\u00e1tica",
+            "institucion": 1
+        }
+    },
+    {
+        "model": "instituciones.inscrito",
+        "pk": 1,
+        "fields": {
+            "nombre": "Hernan David Alvarez Caballero",
+            "institucion": 1,
+            "programas": [1]
+        }
+    },
+    {
+        "model": "instituciones.inscrito",
+        "pk": 2,
+        "fields": {
+            "nombre": "Maria Andrea Claro",
+            "institucion": 1,
+            "programas": [1]
+        }
+    },
+    {
+        "model": "instituciones.inscrito",
+        "pk": 3,
+        "fields": {
+            "nombre": "Luis Guillermo Castilla",
+            "institucion": 1,
+            "programas": [1]
+        }
+    }
+]
