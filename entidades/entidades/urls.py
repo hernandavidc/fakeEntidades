@@ -20,6 +20,7 @@ from instituciones.views import getUsuarios, getUsuarioDetail, getUsuariosByInst
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("todos", getUsuarios),
-    path("<str:s>/", getUsuariosByInstitucion),
+    path("<str:slug>/", getUsuariosByInstitucion),
+    #path("<str:slug>/estudiante/<int:pk>/", getUsuarioDetail),
     path("estudiante/<int:pk>/", getUsuarioDetail)
 ]
