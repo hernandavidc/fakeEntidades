@@ -13,4 +13,7 @@ def getUsuariosByInstitucion(request, slug):
 
 def getUsuarioDetail(request, pk):
     inscrito = Inscrito.objects.filter(id=pk)
-    return JsonResponse(list(inscrito.values("id","nombre","programas")),safe=False)
+    if not inscrito:
+        return JsonResponse(status=404, data={'status':'false','message':'Id no encontrado'})
+    else:
+        return JsonResponse(list(inscrito.values("id","nombre","programas")),safe=False)
